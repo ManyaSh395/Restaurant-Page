@@ -1,0 +1,106 @@
+/* RESET */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== HOME LAYOUT ===== */
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr;
+}
+
+/* Flatten hero wrapper so children participate in .home grid */
+.hero {
+  display: contents;
+}
+
+/* ===== LEFT HERO (FULL HEIGHT) ===== */
+.hero-left {
+  grid-column: 1;
+  grid-row: 1 / -1;   /* spans hero + review */
+  background-color: #c7dcff;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
+
+  color: #0053d4;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-left p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+/* ===== RIGHT HERO IMAGE ===== */
+.hero-right {
+  grid-column: 2;
+  grid-row: 1;
+  overflow: hidden;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== REVIEW SECTION ===== */
+.review {
+  grid-column: 2;
+  grid-row: 2;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+
+  padding: 2.5rem 3rem;
+  align-items: center;
+  background-color: #fffefe;
+}
+
+.review-image img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* ===== REVIEW TEXT ===== */
+.review-text {
+  max-width: 700px;
+}
+
+.review-text p {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: #2f2f2f;
+  margin: 0;
+}
+
+.review-text span {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: #666;
+  text-transform: uppercase;
+}

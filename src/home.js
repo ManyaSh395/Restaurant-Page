@@ -1,6 +1,6 @@
 function buildReviewSection(imgContainer, textContainer) {
     const intImg = document.createElement('img');
-    intImg.src = 'https://hotelnarainniwas.com/dining/cafe-orleans/';
+    intImg.src = 'https://images.unsplash.com/photo-1692262147826-2c26d1bfab5f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
     intImg.alt = 'Interior of the restaurant';
     imgContainer.appendChild(intImg);
 
@@ -9,11 +9,14 @@ function buildReviewSection(imgContainer, textContainer) {
     
     const author = document.createElement('span');
     author.textContent = ' - The Times of India';
+
+    textContainer.appendChild(quote);
+    textContainer.appendChild(author);
 }
 
 function buildHeroRight(container) {
     const heroImage = document.createElement('img');
-    heroImage.src = 'https://www.istockphoto.com/photos/indian-food'
+    heroImage.src = 'https://media.istockphoto.com/id/1127560680/photo/indian-food-curry-butter-chicken-palak-paneer-chiken-tikka-biryani-vegetable-curry-papad-dal.jpg?s=2048x2048&w=is&k=20&c=GKw_jzm9PXq_CzjEFvWykvqOp8_poCyKjDfNnIvbH8M=';
     heroImage.alt = 'Delicious food';
     container.appendChild(heroImage);
 }
@@ -23,8 +26,8 @@ function buildHeroLeft(container) {
     title.textContent = "Manya's Diner";
     container.appendChild(title);
 
-    const icon = document.createElement('img');
-    icon.src = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0053d4"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg>';
+    const icon = document.createElement('div');
+    icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0053d4"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg>';
     icon.classList.add('icon');
     container.appendChild(icon);
 
@@ -37,7 +40,7 @@ function loadHome() {
     const content = document.getElementById('content');
 
     const home = document.createElement('div');
-    homeDiv.classList.add('home');
+    home.classList.add('home');
 
     const hero = document.createElement('div');
     hero.classList.add('hero');
@@ -55,10 +58,10 @@ function loadHome() {
     const review = document.createElement('div');
     review.classList.add('review');
 
-    const reviewImg = document.createElement('img');
-    reviewImg.classList.add('review-img');
+    const reviewImg = document.createElement('div');
+    reviewImg.classList.add('review-image');
 
-    const reviewText = document.createElement('p');
+    const reviewText = document.createElement('div');
     reviewText.classList.add('review-text');
 
     review.appendChild(reviewImg);
