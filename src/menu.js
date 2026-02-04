@@ -2,6 +2,7 @@
 function createMenuSection(parent, titleText, itemsArray) {
     const section = document.createElement('section');
     section.classList.add('menu-section');
+    parent.appendChild(section);
 
     const title = document.createElement('h2');
     title.textContent = titleText.toUpperCase();
@@ -23,7 +24,7 @@ function createMenuCard(item) {
     card.classList.add('menu-card');
 
     const img = document.createElement('img');
-    img.src = item.image;
+    img.src = item.img;
     img.alt = item.name;
     card.appendChild(img);
 
@@ -32,8 +33,10 @@ function createMenuCard(item) {
     card.appendChild(name);
 
     const desc = document.createElement('p');
-    desc.textContent = item.description;
+    desc.textContent = item.desc;
     card.appendChild(desc);
+
+    return card;
 }
 
 //store menu data 
@@ -110,6 +113,8 @@ function loadMenu() {
     createMenuSection(menu, "Sides", sidesData);
     createMenuSection(menu, "Mains", mainsData);
     createMenuSection(menu, "Desserts", dessertsData);
+
+    content.appendChild(menu);
 }
 
 export default loadMenu;

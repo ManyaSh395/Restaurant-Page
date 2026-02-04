@@ -9,17 +9,17 @@ function clearContent() {
 }
 
 document.getElementById('home-button').addEventListener('click', () => {
-    clearContent;
+    clearContent();
     loadHome();
 });
 
 document.getElementById('menu-button').addEventListener('click', () => {
-    clearContent;
+    clearContent();
     loadMenu();
 });
 
 document.getElementById('contact-button').addEventListener('click', () => {
-    clearContent;
+    clearContent();
     loadContact();
 });
 
