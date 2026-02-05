@@ -5,6 +5,48 @@ html, body {
   padding: 0;
 }
 
+/* ===== HEADER / NAVBAR ===== */
+header {
+  position: fixed;          /* stays in place */
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* pill container */
+nav {
+  background: white;
+  padding: 0.6rem;
+  border-radius: 999px;
+  display: flex;
+  gap: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* buttons */
+nav button {
+  border: none;
+  background: transparent;
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+nav button:hover {
+  background: #f0f0f0;
+}
+
+/* active tab */
+nav button.active {
+  background: #0053d4;
+  color: white;
+}
+
 /* ===== HOME LAYOUT ===== */
 .home {
   min-height: 100vh;
@@ -155,4 +197,34 @@ html, body {
   font-size: 1rem;
   line-height: 1.4;
   padding: 0 1rem 1rem;
+}
+
+.contact {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  row-gap: 3rem;
+  column-gap: 4.5rem;
+  padding: 5rem 6rem;
+  background-color: #5f6d3b;
+  color: black;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.visit-add,
+.call-us,
+.email,
+.hours {
+  display: contents;
 }
