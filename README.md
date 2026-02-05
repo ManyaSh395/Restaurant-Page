@@ -73,3 +73,6 @@ Open your browser and go to: http://localhost:8080
 
 ## Build for Production:
 npx webpack
+
+## See Live Preview at: 
+https://manyash395.github.io/Restaurant-Page/
